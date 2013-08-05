@@ -54,14 +54,16 @@ public class FinallyTest {
 
     public static void main(String[] args) {
         FinallyTest ft = new FinallyTest();
+        System.out.println("------Return-------");
         // 测试return语句
         ft.testReturn();
-        System.out.println("-------------");
 
+        System.out.println("\n\n------Continue-------");
         // 测试continue语句
         ft.testContinue();
-        System.out.println("-------------");
 
+
+        System.out.println("\n\n------Break-------");
         // 测break语句
         ft.testBreak();
     }
