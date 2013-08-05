@@ -3,6 +3,8 @@ package com.diguage.pusslers.article_07;
 import java.util.Date;
 
 /**
+ * 日期比较
+ * <p/>
  * User: D瓜哥，http://www.diguage.com/
  * DateTest: 13-8-5
  * Time: 下午7:24
