@@ -1,6 +1,8 @@
 package com.diguage.pusslers.article_04;
 
 /**
+ * final关键字的使用
+ * <p/>
  * User: D瓜哥，http://www.diguage.com/
  * Date: 13-8-5
  * Time: 上午11:37
