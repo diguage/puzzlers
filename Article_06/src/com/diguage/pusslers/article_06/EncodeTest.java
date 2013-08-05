@@ -3,6 +3,8 @@ package com.diguage.pusslers.article_06;
 import java.io.UnsupportedEncodingException;
 
 /**
+ * 测试中文汉字和英文字母在不同编码情况下所占的字节数
+ * <p/>
  * User: D瓜哥，http://www.diguage.com/
  * Date: 13-8-5
  * Time: 下午6:28
