@@ -8,13 +8,62 @@ package com.diguage.pusslers.article_04;
  * Time: 上午9:32
  */
 public class FinallyTest {
-    public static void main(String[] args) {
+    // 测试return语句
+    public ReturnClass testReturn() {
         try {
-            throw new NullPointerException();
-        } catch (NullPointerException e) {
-            System.out.println("程序抛出了异常");
+            return new ReturnClass();
+        } catch (Exception e) {
+            e.printStackTrace();
         } finally {
-            System.out.println("执行了finally语句块");
+            System.out.println("执行了finally语句");
+        }
+        return null;
+    }
+
+    // 测试continue语句
+    public void testContinue() {
+        for (int i = 0; i < 3; i++) {
+            try {
+                System.out.println(i);
+                if (i == 1) {
+                    continue;
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+            } finally {
+                System.out.println("执行了finally语句");
+            }
         }
     }
+
+    // 测试break语句
+    public void testBreak() {
+        for (int i = 0; i < 3; i++) {
+            try {
+                System.out.println(i);
+                if (i == 1) {
+                    break;
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+            } finally {
+                System.out.println("执行了finally语句");
+            }
+        }
+    }
+
+    public static void main(String[] args) {
+        FinallyTest ft = new FinallyTest();
+        // 测试return语句
+        ft.testReturn();
+        System.out.println("-------------");
+
+        // 测试continue语句
+        ft.testContinue();
+        System.out.println("-------------");
+
+        // 测break语句
+        ft.testBreak();
+    }
+
 }
