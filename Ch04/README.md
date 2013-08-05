@@ -1,5 +1,6 @@
-### finally语句的执行
+# final、finally和finalize的区别
 
+## finally语句的执行
 
 #### finally与return
 有语句如下：
@@ -66,8 +67,17 @@ public void testBreak() {
 
 **执行完break后，还执行finally语句。**
 
-#### 总计
+#### 总结
 
 **问题：** return 是退出当前方法，并将值或者对象返回。执行了return方法后，退出当前方法了，还怎么执行finally呢？那么执行顺序究竟是怎么样的呢？
 
 **解答：** 正确的执行顺序：编译器在编译`return new ReturnClass();`时，将它分成了两个步骤，`new ReturnClass()`和`return`，前一个创建对象的语句是在finally语句执行之前被执行的，而后一个return是在finally语句块之后执行的，也就是说finally 语句块是在程序退出方法之前被执行的。同样，finally语句块实在循环被跳过（continue）和中断（break）之前被执行的。
+
+> 还可以通过查看编译后的class文件来确定！
+>
+> 1. 执行`javac -g <ClassName.java>` // 编译源码
+> 2. 执行`javap -c -s -l -verbose <ClassName>` // 查看编译结果
+
+
+## finalize方法
+`finalize()`方法是在GC清理它所属的对象时被调用，如果执行它的过程中抛出了无法捕获的异常(uncaught exception)，GC将终止对该对象的清理，并且该异常会被忽略；直到下一次GC开始清理这个对象时，它的`finalize()`会被再次调用。
