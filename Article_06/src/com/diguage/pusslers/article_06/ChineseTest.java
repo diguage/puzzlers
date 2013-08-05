@@ -1,6 +1,8 @@
 package com.diguage.pusslers.article_06;
 
 /**
+ * 测试中文在Java中的表现
+ * <p/>
  * User: D瓜哥，http://www.diguage.com/
  * Date: 13-8-5
  * Time: 下午5:37
@@ -21,6 +23,11 @@ public class ChineseTest {
         System.out.print(d);
         System.out.print(e);
         System.out.print(f);
+
+
+        System.out.println("------------------");
+        System.out.print("a + b + c + d + e + f = ");
+        System.out.println(a + b + c + d + e + f);
 
         System.out.println("------------------");
 
