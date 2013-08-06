@@ -1,5 +1,7 @@
 package com.diguage.pusslers.article_07;
 
+import java.text.DateFormat;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -11,12 +13,24 @@ import java.util.Date;
  * Time: 上午11:04
  */
 public class DateFormatTest {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws ParseException {
+        //将字符串转化成日期
+        String s = "2008-08-08";
+        System.out.println("原始字符串：" + s);
+        String pattern = "yyyy-MM-dd";
+        System.out.println("对应的表达式：" + pattern);
+        DateFormat dateFormat = new SimpleDateFormat(pattern);
+        Date date = dateFormat.parse(s);
+        System.out.println("转化后的值：" + date);
+
+
+        System.out.println("-----------------------");
+
         // 使用系统当前日期时间值创建一个Date对象
         Date now = new Date();
 
         // 创建一个日期格式表达式
-        String pattern = "年代：G; 年份：y; 月份：M; 日：d; 时(1~12)：h; " +
+        pattern = "年代：G; 年份：y; 月份：M; 日：d; 时(1~12)：h; " +
                 "时（1~23）：H; 分：m; 秒：s; 毫秒：S; 星期：E; 上/下午:a; 时区：z;";
 
         // 使用日期格式表达式创建一个SimpleDateFormat对象
