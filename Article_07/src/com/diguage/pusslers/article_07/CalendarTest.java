@@ -38,5 +38,24 @@ public class CalendarTest {
         System.out.println("日期时间：" + CalendarTest.toFriendlyString(c2));
         System.out.println();
 
+        //参数含义依次为：年、月、日
+        Calendar c3 = new GregorianCalendar(2008, 8, 8);
+        System.out.println("创建方式：new GregorianCalendar(2008, 8, 8)");
+        System.out.println("日期时间：" + CalendarTest.toFriendlyString(c3));
+        System.out.println();
+
+        // 参数含义依次为：年、月、日、时、分
+        Calendar c4 = new GregorianCalendar(2008, 8, 8, 6, 10);
+        System.out.println("创建方式：new GregorianCalendar(2008, 8, 8, 6, 10)");
+        System.out.println("日期时间：" + CalendarTest.toFriendlyString(c4));
+        System.out.println();
+
+        // 参数含义依次为：年、月、日、时、分、秒
+        Calendar c5 = new GregorianCalendar(2008, 8, 8, 18, 10, 5);
+        System.out.println("创建方式：new GregorianCalendar(2008, 8, 8, 18, 10, 5)");
+        System.out.println("日期时间：" + CalendarTest.toFriendlyString(c5));
+        System.out.println();
+
+
     }
 }
