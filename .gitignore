@@ -6,6 +6,6 @@
 *.ear
 
 # Custom
-.idea/*
-*.iml
+#.idea/*
+#*.iml
 
